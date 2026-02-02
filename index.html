@@ -1,0 +1,62 @@
+<!-- para abrir o live server clique com botão direito no arquivo index html -->
+<!-- começar digitando html e escolher a opção html: 5 -->
+<!DOCTYPE html>
+<html lang="pt-BR"> <!--definição do idioma -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana do zero ao programador contratado - Fundo Mágico</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet" />
+
+    <!--como conectar o css ao html: -->
+
+    <link rel = 'stylesheet' href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/estilos.css">
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+
+</head>
+<body>
+    <header class="header">
+        <h1>Fundo mágico</h1> <!-- irá aparecer no topo do site -->
+        <p class="subtitle">Descreva o que você imagina e veja a magia acontecer, crie backgrounds com o poder da IA!
+        </p>
+    </header>
+    <main class="container">
+        <section class="card main-card">
+            <h2 class="card-header">Descreva o background que você deseja.</h2>
+            <!--criei uma sessão main com um parágrafo dentro-->
+            <form class="form-group"> <!--formulário para entrada de dados do usuário-->
+                <textarea id="background-description" placeholder="Ex: um gradiente do azul claro para o branco"
+                    rows="5"></textarea> <!-- id é um atributo único-->
+                <!-- placeholder é um texto que aparece dentro da caixa de texto como exemplo de preenchimento-->
+                <button id="generate-btn" class="btn-magic">
+
+                    <span id="btn-text">
+                        Gerar Background</span> <!-- tag span é um elemento inline sem significado semântico; serve apenas como contêiner genérico para aplicar estilo ou manipular via JavaScript.-->
+
+                </button> <!--botão para enviar o formulário e gerar a imagem-->
+            </form>
+            <section id = "preview-section" class = "preview-card"></section> <!-- seção para mostrar o background gerado, class preview-card tem a função de exibir o preview -->
+
+            <section id="code-output" class="code-grid">    
+                <div class="card code-card">
+                    <h3 class="code-title">Código HTML</h3>
+                    <pre id="html-code" class="code-block"></pre>
+
+                </div>
+                <div class="card code-card">
+                    <h3 class="code-title">Código CSS</h3> 
+                    <pre id="css-code" class="code-block"></pre> <!-- A class="code-block" é um nome de classe CSS usado para estilizar blocos de código (elementos <pre>, <code>), tornando-os legíveis e consistentes (fonte monoespaçada, fundo, padding, quebras, destaque de sintaxe etc.).--> 
+                </div>
+            </section>
+        </section>
+    </main>
+    <!-- conexão com arquivo js: -->
+         <!-- <script src="./src/js/index.js"></script> -->
+</body>
+
+</html>
